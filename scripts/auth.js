@@ -10,6 +10,8 @@ auth.onAuthStateChanged(user =>{
         db.collection('guides').onSnapshot(snapshot => {
             setupGuides(snapshot.docs);
             setupUI(user);
+        }).catch(err=> {
+            console.log(err.message)
         });
     } else{
         setupGuides([]);
@@ -44,7 +46,7 @@ signupForm.addEventListener('submit',(e)=>{
 
          } );
 });
-
+});
 
 //logout
 const logout = document.querySelector('#logout');
