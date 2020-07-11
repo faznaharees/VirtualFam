@@ -1,5 +1,3 @@
-//get data
-
 
 
 
@@ -18,12 +16,6 @@ auth.onAuthStateChanged(user =>{
         setupUI();
     }
 })
-
-
-
-
-
-
 
 
 //sign up

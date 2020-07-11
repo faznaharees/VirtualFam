@@ -14,7 +14,7 @@ const setupUI = (user) => {
      
         });
         //toggle UI elements
-               loggedInLinks.forEach(item =>  item.style.display='block');
+        loggedInLinks.forEach(item =>  item.style.display='block');
         loggedOutLinks.forEach(item => item.style.display='none');
     }
     else{
@@ -33,10 +33,12 @@ const setupGuides = (data) =>{
     data.forEach(doc => {
         const guide = doc.data();
         const li = `
-        <li>
-        <div class="collapsible-header grey lighten-4">${guide.title}</div>
+        <li id="guideli">
+        <div class="collapsible-header grey lighten-4">${guide.title}
+        </div>
         <div class="collapsible-body white"><span>${guide.content}</span></div>
         <img src=${guide.link} width=100%/>
+        
         </li>`;
         html += li;
     }) ;
